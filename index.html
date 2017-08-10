@@ -5,33 +5,62 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Prologis/HCL team web server page</title>
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://use.fontawesome.com/c4d4ec4b6f.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('#myModal').modal('show');
+        });
+    </script>
+
+
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-sm">
-        <div class="text-center">
-            <a class="navbar-brand" href="https://prologis.sharepoint.com/Pages/default.aspx">
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
 
-                <img src="images/HCL.PNG" style="display: inline-block;" height="20">
+        <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <a class="navbar-brand" href="#"></a>
+        <img src="images/HCL.PNG" class="hcl" style="display: inline-block;" height="20">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#helpful-links">Helpful Links</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#collab-links">Collaborative Links</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact" data-toggle="modal" data-target="#myModal"><i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>Contact</a>
+                </li>
 
-                <span style="display: inline-block;"></span></a>
-            <ul class="nav navbar-nav">
-                <li class="active nav-item"><a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item"><a href="#about-us" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item"><a href="#helpful-links" class="nav-link">Helpful Links</a>
-                </li>
-                <li class="nav-item"><a href="#collab-links" class="nav-link">Collaborative Links</a>
-                </li>
-                <li class="nav-item"><a href="#contact" class="nav-link"><i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>Contact</a>
-                </li>
+
+
             </ul>
+            <form class="form-inline mt-2 mt-md-0">
+
+
+            </form>
         </div>
     </nav>
+
+
+
+
     <h1 class="text-center">
 
         Welcome to our Prologis Service Desk Home page
@@ -94,8 +123,11 @@
                 <div class="card bg-faded card-block mb-3">
                     <a id="about-us"></a>
                     <h1>About our team</h1>
-                    <h3><strong>We&apos;re a helpdesk team working out of Cary, North Carolina; Krakow, Poland and Shanghai, China supporting Prologis. This landing page has been built for the Prologis Service Desk in mind, with links, tools and soon to come live feed from Service Now.</strong></h3>
-                    <img src="images/Prologis.png">
+                    <hr>
+                    <h3><strong>We&apos;re a helpdesk team working out of Cary, North Carolina; Krakow, Poland and Shanghai, China supporting Prologis. This landing page has been built for the Prologis Service Desk in mind, with links and tools.</strong></h3>
+                    <hr>
+                    <img src="images/Prologis.png" class="rounded mx-auto d-block">
+                    <hr>
                     <div class="container-fluid">
                         <div class="text-center">
                             <div class="container">
@@ -149,6 +181,7 @@
                     <div class="card bg-faded card-block mb-3">
                         <a id="helpful-links"></a>
                         <h2><strong>Helpful Links</strong></h2>
+
                         <table class="table table-bordered" "poptable"="">
                             <thead class="text-center">
                                 <!-- <tr>
@@ -274,9 +307,35 @@
         <div class="container">
             <div class="text-center">
                 <div class="contact">
-                    <a id="contact"></a>
-                    <p class="lead">Here is a list of our Service Desk agent&apos;s phone numbers for emergency purposes
-                    </p>
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"><b>Here is a list of Service Desk Agent's contact info.</b></h5>
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                     <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5 style="color: #e60000;">Please only use in case of emergency!</h5>
+                                    <a href="https://prologis.box.com/s/81jgql9e6cdeus2phyk5sljsul0ydjel" target="_blank">Do not share these numbers with users outside of the Service Desk.
+                                        Contact info can be found on Box by clicking here.</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
             </div>
         </div>
